@@ -1,10 +1,11 @@
 import React from 'react';
+import FreeChat from "./containers/FreeChat/FreeChat";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <FreeChat/>
+    </>
   );
 }
 
