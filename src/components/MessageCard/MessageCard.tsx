@@ -12,12 +12,12 @@ interface MessageCardProps {
 const MessageCard: React.FC<MessageCardProps> = ({author, date, message}) => {
   return (
     <Card sx={{mb: 2}}>
-      <CardContent>
-        <Typography>{author}</Typography>
-        <Typography>{date.toString()}</Typography>
+      <CardContent sx={{display: "flex", justifyContent: "space-between"}}>
+        <Typography>Date: {date.toString().slice(0, 10)} {date.toString().slice(11, 19)}</Typography>
+        <Typography>Author: {author}</Typography>
       </CardContent>
-      <CardContent>
-        <Typography>{message}</Typography>
+      <CardContent sx={{background: "white", opacity: "0.3", color: "black"}}>
+        <Typography sx={{textAlign: "right"}}>{message}</Typography>
       </CardContent>
     </Card>
   );
